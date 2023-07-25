@@ -1,4 +1,5 @@
 import { Link } from "@remix-run/react";
+import type { LinksFunction } from "@remix-run/node";
 
 const projects = [
   {

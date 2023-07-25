@@ -1,0 +1,49 @@
+/*
+* Expanding  Cards 
+*/
+.exp-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.ex-cards__panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  flex: 0.5;
+  position: relative;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  transition: flex 0.5s ease-in-out;
+}
+
+.ex-cards__panel h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.ex-cards__panel.ex-cards__panel--active {
+  flex: 5;
+}
+
+.ex-cards__panel.ex-cards__panel--active h1 {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .ex-cards {
+    width: 100vw;
+  }
+  .ex-cards__panel:nth-of-type(4),
+  .ex-cards__panel:nth-of-type(5) {
+    display: none;
+  }
+}
