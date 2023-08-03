@@ -11,6 +11,7 @@ import {
 
 import baseStyles from "./styles/base.css";
 import baseElementsStyles from "./styles/base-elements.css";
+import stepsStyles from "./styles/steps.css";
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   {
