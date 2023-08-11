@@ -1,0 +1,55 @@
+body {
+  background-image: linear-gradient(90deg, violet, rgb(125, 125, 223));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.search {
+  position: relative;
+}
+
+.search .input {
+  background-color: rgb(244, 240, 240);
+  color: rgb(25, 5, 5);
+  font-size: 16px;
+  border: 0;
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+  transition: width 0.3s ease;
+}
+
+.svg {
+  margin: 8px;
+}
+
+.btn {
+  background-color: rgb(244, 240, 240);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: width 0.3s ease;
+}
+
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 200px;
+}
+
+.search.active .btn {
+  transform: translateX(198px);
+}
