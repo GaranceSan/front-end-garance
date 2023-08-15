@@ -1,5 +1,5 @@
 import { type LinksFunction } from "@remix-run/node";
-import blurryEffectStyle from "../styles/blurryEffectStyle.css";
+import blurryEffectStyle from "../styles/projects/blurryEffectStyle.css";
 import React, { useState } from "react";
 export const links: LinksFunction = () => [
   {

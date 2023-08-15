@@ -21,6 +21,11 @@ const projects = [
     title: "blurry effect",
     path: "blurry-effect",
   },
+
+  {
+    title: "scroll",
+    path: "scroll",
+  },
 ];
 
 export default function ProjectsIndexRoute() {

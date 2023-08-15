@@ -1,5 +1,5 @@
 import { type LinksFunction } from "@remix-run/node";
-import rotatingStyles from "../styles/rotating-nav.css";
+import rotatingStyles from "~/styles/projects/rotating-nav.css";
 
 import React, { useState } from "react";
 
