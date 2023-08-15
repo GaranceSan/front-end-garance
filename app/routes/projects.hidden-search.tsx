@@ -1,5 +1,5 @@
 import { type LinksFunction } from "@remix-run/node";
-import hiddenSearchStyles from "../styles/hiddenSearchStyles.css";
+import hiddenSearchStyles from "~/styles/projects/hiddenSearchStyles.css";
 import { BsSearch } from "react-icons/bs";
 import React, { useState } from "react";
 

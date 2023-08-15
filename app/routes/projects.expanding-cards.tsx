@@ -1,7 +1,7 @@
 import { type LinksFunction } from "@remix-run/node";
 import { ExpandingCards } from "~/components/ExpandingCards";
 
-import exCardsStyles from "../styles/expanding-cards.css";
+import exCardsStyles from "~/styles/projects/expanding-cards.css";
 
 export const links: LinksFunction = () => [
   {
