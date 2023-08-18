@@ -1,0 +1,120 @@
+:root {
+  --left-bg-color: rgba(207, 207, 6, 0.5);
+  --right-bg-color: rgba(251, 102, 102, 0.5);
+  --left-btn-color: rgb(90, 142, 62);
+  --right-btn-color: rgb(38, 5, 76);
+  --hover-width: 75%;
+  --hover-other: 25%;
+}
+
+.split-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: darkolivegreen;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 10rem;
+  border: white solid 0.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+  background-image: url("/imgs/gourdanbeauty.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split.left::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-bg-color);
+}
+
+.split.left .btn:hover {
+  background-color: var(--left-btn-color);
+  border-color: var(--left-btn-color);
+}
+
+.split.right {
+  right: 0;
+  background-image: url("/imgs/purplelady.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split.right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--right-bg-color);
+}
+
+.split.right .btn:hover {
+  background-color: var(--right-btn-color);
+  border-color: var(--right-btn-color);
+}
+
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--hover-other);
+}
+
+.hover-right .left {
+  width: var(--hover-other);
+}
+
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+  transition: all 0.8s ease-in-out;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+    top: 10%;
+  }
+}
