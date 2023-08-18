@@ -18,13 +18,17 @@ const projects = [
     path: "hidden-search",
   },
   {
-    title: "blurry effect",
+    title: "Blurry effect",
     path: "blurry-effect",
   },
 
   {
-    title: "scroll",
+    title: "Scroll",
     path: "scroll",
+  },
+  {
+    title: "Split",
+    path: "split",
   },
 ];
 
