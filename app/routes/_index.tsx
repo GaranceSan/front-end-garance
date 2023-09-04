@@ -1,6 +1,14 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import type { V2_MetaFunction, LinksFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
+import homeStyle from "~/styles/home.css";
+
+export const links: LinksFunction = () => [
+  {
+    rel: "stylesheet",
+    href: homeStyle,
+  },
+];
 
 //types
 
@@ -47,7 +55,6 @@ export const loader = async () => {
     const response = await fetch(url);
     const responseData = await response.json();
     const data = responseData.items[0];
-    console.log(responseData);
     return json({
       data: data,
     });
@@ -59,9 +66,17 @@ export const loader = async () => {
 export default function Index() {
   const { data } = useLoaderData<typeof loader>();
   return (
-    <main>
-      <h1>{data.title}</h1>
-      <p>{data.intro}</p>
-    </main>
+    <div>
+      <div className="banner_container">
+        <div className="titre_texte">
+          <h1>{data.banner_title}</h1>
+          <p>{data.banner_text}</p>
+        </div>
+        <img
+          src={`http://127.0.0.1:8000${data.banner_image.meta.download_url}`}
+          alt={`${data.banner_image.title}`}
+        />
+      </div>
+    </div>
   );
 }
