@@ -30,6 +30,10 @@ const projects = [
     title: "Split",
     path: "split",
   },
+  {
+    title: "Animated Navbar",
+    path: "animated-navbar",
+  },
 ];
 
 export default function ProjectsIndexRoute() {
