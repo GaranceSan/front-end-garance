@@ -10,10 +10,50 @@
 * {
   margin: 0;
 }
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+
+body header {
+  background-color: #eec67e;
+  border-bottom: solid 2px rgb(72, 67, 99);
+}
+
+body header ul {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: right;
+  padding: 0px 20px;
+}
+
+body header li {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px 20px;
+}
+
+body header a {
+  text-decoration: none;
+  color: rgb(72, 67, 99);
+  font-size: 20px;
+  font-size: bold;
+  cursor: pointer;
+}
+
+body footer {
+  background-color: navy;
+}
+
+body footer p {
+  color: #eec67e;
+  font-size: 15px;
+}
+
 img,
 picture,
 video,

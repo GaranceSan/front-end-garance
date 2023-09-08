@@ -34,9 +34,32 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <header>my header</header>
+        <header>
+          <ul>
+            <li>
+              <a href="#">HOME</a>
+            </li>
+            <li>
+              <a href="#">ABOUT</a>
+            </li>
+            <li>
+              <a href="#">CV</a>
+            </li>
+            <li>
+              <a href="#">PORTFOLIO</a>
+            </li>
+            <li>
+              <a href="#">BLOG</a>
+            </li>
+            <li>
+              <a href="#">CONTACT</a>
+            </li>
+          </ul>
+        </header>
         <Outlet />
-        <footer>my footer</footer>
+        <footer>
+          <p>© Garance 2023</p>
+        </footer>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
