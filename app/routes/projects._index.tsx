@@ -34,6 +34,10 @@ const projects = [
     title: "Animated Navbar",
     path: "animated-navbar",
   },
+  {
+    title: "Animated Form",
+    path: "animated-form",
+  },
 ];
 
 export default function ProjectsIndexRoute() {
