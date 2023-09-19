@@ -38,6 +38,10 @@ const projects = [
     title: "Animated Form",
     path: "animated-form",
   },
+  {
+    title: "Dad Jokes - Api fetch",
+    path: "api-fetch",
+  },
 ];
 
 export default function ProjectsIndexRoute() {
