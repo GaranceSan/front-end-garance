@@ -2,6 +2,8 @@ import type { V2_MetaFunction, LinksFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import homeStyle from "~/styles/home.css";
+import { BASE_API_URL } from "~/common/constants.server";
+import { getGlobalEnv } from "~/common/utils";
 
 export const links: LinksFunction = () => [
   {
@@ -50,8 +52,7 @@ export const meta: V2_MetaFunction = () => {
 
 export const loader = async () => {
   try {
-    const url =
-      "http://127.0.0.1:8000/api/v2/pages/?slug=home&type=home.HomePage&fields=*";
+    const url = `${BASE_API_URL}/pages/?slug=home&type=home.HomePage&fields=*`;
     const response = await fetch(url);
     const responseData = await response.json();
     const data = responseData.items[0];
@@ -65,6 +66,8 @@ export const loader = async () => {
 
 export default function Index() {
   const { data } = useLoaderData<typeof loader>();
+  const ENV = getGlobalEnv();
+  console.log(ENV);
   return (
     <div>
       <div className="banner_container">
@@ -73,7 +76,7 @@ export default function Index() {
           <p>{data.banner_text}</p>
         </div>
         <img
-          src={`http://127.0.0.1:8000${data.banner_image.meta.download_url}`}
+          src={`${ENV.BASE_BACK_URL}${data.banner_image.meta.download_url}`}
           alt={`${data.banner_image.title}`}
         />
       </div>
