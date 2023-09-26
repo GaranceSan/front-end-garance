@@ -60,6 +60,7 @@ export const loader = async () => {
       data: data,
     });
   } catch (error) {}
+  return null;
 };
 
 // page components

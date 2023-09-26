@@ -38,6 +38,10 @@ const projects = [
     title: "Animated Form",
     path: "animated-form",
   },
+  {
+    title: "FAQ",
+    path: "FAQ",
+  },
 ];
 
 export default function ProjectsIndexRoute() {
@@ -48,9 +52,11 @@ export default function ProjectsIndexRoute() {
         {projects.map((project) => {
           return (
             <>
-              <li>
-                <Link to={project.path}>{project.title}</Link>
-              </li>
+              <ul>
+                <li>
+                  <Link to={project.path}>{project.title}</Link>
+                </li>
+              </ul>
             </>
           );
         })}
