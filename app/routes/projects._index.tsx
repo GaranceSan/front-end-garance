@@ -42,6 +42,10 @@ const projects = [
     title: "FAQ",
     path: "FAQ",
   },
+  {
+    title: "Drop boxes",
+    path: "drop-boxes",
+  },
 ];
 
 export default function ProjectsIndexRoute() {
