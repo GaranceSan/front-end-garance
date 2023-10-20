@@ -46,6 +46,10 @@ const projects = [
     title: "Drop boxes",
     path: "drop-boxes",
   },
+  {
+    title: "Movie App",
+    path: "movie-app",
+  },
 ];
 
 export default function ProjectsIndexRoute() {

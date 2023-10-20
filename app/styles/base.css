@@ -11,12 +11,45 @@
   margin: 0;
 }
 
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+/* end of reset */
+
+/* 
+* Base styles
+*/
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
 body header {
+  width: 100%;
   background-color: #eec67e;
   border-bottom: solid 2px rgb(72, 67, 99);
 }
@@ -47,37 +80,10 @@ body header a {
 
 body footer {
   background-color: navy;
+  width: 100%;
 }
 
 body footer p {
   color: #eec67e;
   font-size: 15px;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-#root,
-#__next {
-  isolation: isolate;
 }
