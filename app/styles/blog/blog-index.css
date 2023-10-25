@@ -1,14 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lobster+Two&family=Poppins&family=Style+Script&display=swap");
+
 body {
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #eec67e;
   color: rgb(72, 67, 99);
+  padding: 20px;
+  position: relative;
 }
 
 h1 {
-  font-family: Lobster two;
+  font-family: "Cedarville", cursive;
+  margin: 10px;
+}
+
+.liste {
+  background-color: red;
+  position: absolute;
+  left: 0px;
+}
+
+h3 {
+  margin: 10px;
+}
+
+footer {
+  bottom: 0px;
 }

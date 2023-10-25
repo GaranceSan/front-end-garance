@@ -46,6 +46,7 @@ h6 {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: #eec67e;
 }
 
 body header {
@@ -78,12 +79,15 @@ body header a {
   cursor: pointer;
 }
 
-body footer {
+footer {
+  position: absolute;
   background-color: navy;
   width: 100%;
+  bottom: 0;
 }
 
-body footer p {
+footer p {
   color: #eec67e;
   font-size: 15px;
+  margin: 10px;
 }

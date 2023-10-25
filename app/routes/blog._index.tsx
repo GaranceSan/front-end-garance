@@ -56,21 +56,23 @@ export default function BlogIndexRoute() {
     <>
       <h1>{indexPage.display_title}</h1>
       <h2>{indexPage.intro}</h2>
-
-      <ul>
-        {detailItems.length &&
-          detailItems.map((post) => {
-            return (
-              <>
-                <ul>
-                  <li>
-                    <Link to={post.meta.slug}>{post.display_title}</Link>
-                  </li>
-                </ul>
-              </>
-            );
-          })}
-      </ul>
+      <div className="liste">
+        <h3>Liste des articles :</h3>
+        <ul>
+          {detailItems.length &&
+            detailItems.map((post) => {
+              return (
+                <>
+                  <ul>
+                    <li>
+                      <Link to={post.meta.slug}>{post.display_title}</Link>
+                    </li>
+                  </ul>
+                </>
+              );
+            })}
+        </ul>
+      </div>
     </>
   );
 }

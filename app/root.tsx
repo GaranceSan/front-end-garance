@@ -65,9 +65,7 @@ export default function App() {
           </ul>
         </header>
         <Outlet />
-        <footer>
-          <p>© Garance 2023</p>
-        </footer>
+
         <ScrollRestoration />
         <Scripts />
         <script
@@ -76,6 +74,9 @@ export default function App() {
           }}
         />
         <LiveReload />
+        <footer>
+          <p>© Garance 2023</p>
+        </footer>
       </body>
     </html>
   );
